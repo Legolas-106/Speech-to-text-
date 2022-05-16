@@ -10,10 +10,10 @@ def get_large_audio_transcription(path):
     """
     # open the audio file 
     sound = AudioSegment.from_wav(path)  
-    # split audio sound where silence is 700 miliseconds
+    # split audio sound where silence is 70 miliseconds
     chunks = split_on_silence(sound,
         # experiment with this value for your target audio file
-        min_silence_len = 600,
+        min_silence_len = 70,
         # adjust this per requirement
         silence_thresh = sound.dBFS-14,
         # keep the silence for 1 second, adjustable as well
